@@ -1,0 +1,11 @@
+# Godot
+.godot/
+*.import
+export_presets.cfg
+# Third-party assets with unconfirmed or repo-forbidden licenses (see docs/game-plan/02_asset_inventory_and_licensing.md)
+assets/third_party/shooter_essentials/
+assets/third_party/psx_brick_building/
+assets/third_party/psx_cars/
+assets/third_party/urbanman/
+assets/third_party/detective_office/
+assets/third_party/industrial_exterior/
