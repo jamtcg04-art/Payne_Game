@@ -109,3 +109,10 @@ Use the OGG files in Godot (WAV for the piano pack; convert to OGG at M0 to keep
 
 ## Audio gaps remaining
 Ambience (rain, traffic, sirens, wind), impacts, explosions, shotgun/revolver/SMG fire, UI sounds, voice narration. Pistol SFX exist (Desert Eagle set). Next step: jam to say whether to source more, or keep placeholders.
+
+## Decision (jam, 2026-11-28): placeholders for the missing audio
+Ambience, impacts, explosions, shotgun/revolver/SMG fire, UI sounds and narration use **placeholders for now**.
+- Create `audio/placeholder/` with one short generated sound per event id (e.g. synthesized noise bursts/tones via a `tools/gen_placeholder_audio.gd` or Python script; no downloads, no licensing issues). Files named by event id: `sfx_shotgun_fire`, `sfx_revolver_fire`, `sfx_impact_<surface>`, `sfx_explosion`, `amb_rain_loop`, `amb_city_loop`, `ui_click`, etc.
+- `Audio` autoload looks up sounds by event id from `data/audio/sfx.tres`; swapping in real audio later means changing the resource path only.
+- Narration: on-screen text with a typewriter effect and a short blip; no voice-over until jam decides.
+- Track each placeholder in `docs/audio_todo.md` so replacements are easy to find.
