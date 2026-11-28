@@ -77,3 +77,35 @@ JDSherbert (VOX, Desert Eagle SFX), ATTurtlez (VOX), Alstra Infinite (Shooter Es
 2. Is the AI-generated disclosure on PSX Town Props OK for you? It is only 5 props and easily replaced.
 3. Do you want comic voice lines ("Bruh") in the game, or should I use only grunts/pain/death?
 4. Still needed: music, ambience, shotgun/SMG sounds. Any sources, or placeholders?
+
+---
+# Update 2026-11-28: jam's answers and music
+
+**Answers from jam:** license/terms for all packs confirmed *for use in the game for now*; PSX Town Props (AI-assisted) approved; comic VOX lines approved. Confirmation covers using the assets in the game only. **They still stay out of the repo** (local-only) because most licenses forbid redistributing raw files.
+
+## Music packs (new)
+| Pack | Format | Contents | License as shipped |
+|---|---|---|---|
+| **Piano Pack** | 10 WAV | 10 piano tracks, 26–84 s each (Track 01–10) | no license file |
+| **CHAOS — a collection of music** | 10 WAV + 10 OGG | 10 tracks, 45–180 s: Forgive Me, Fight Till Death, Speak Of The Devil, Frozen Hearts, Resurrection, Interlude To Chaos, Mastering Madness, Doom Prevails, Another Dawn, Last Fight | no license file |
+
+Use the OGG files in Godot (WAV for the piano pack; convert to OGG at M0 to keep builds small). Loops: confirm each track loops cleanly; non-looping ones play as one-shots with a fade.
+
+**Suggested mapping [GUESS; mapped from titles only, I have not listened]:**
+| Use | Tracks |
+|---|---|
+| Hub, exploration, noir narration, menus, comic panels | Piano Pack 01–10 (quiet tracks for hub/menu, longer Track 06 for cutscenes) |
+| Combat layer (adaptive) | Fight Till Death, Speak Of The Devil, Mastering Madness |
+| Mission calm/tension | Frozen Hearts, Interlude To Chaos, Forgive Me |
+| Set pieces | Resurrection (L3 yard), Doom Prevails (L5 docks) |
+| Boss | Last Fight (L6 Usher) |
+| Epilogue/credits | Another Dawn |
+
+## Music system (add to file 05 autoloads → `Audio`)
+- `MusicDirector`: two `AudioStreamPlayer`s (calm, combat) with crossfade 1.5 s; state driven by `Events` (`enemy_alerted` → combat; no alerts for 8 s → calm).
+- `data/music/<level>.tres` (`MusicSet`: calm tracks, combat tracks, stinger) so tracks are assigned per level in data, not code.
+- Hush Time: low-pass filter + pitch to 0.6 on the music bus (already planned for the world bus); piano tracks duck 6 dB under dialogue.
+- Fallback if a track is missing (local-only assets): silent bus with a console warning, never a crash.
+
+## Audio gaps remaining
+Ambience (rain, traffic, sirens, wind), impacts, explosions, shotgun/revolver/SMG fire, UI sounds, voice narration. Pistol SFX exist (Desert Eagle set). Next step: jam to say whether to source more, or keep placeholders.

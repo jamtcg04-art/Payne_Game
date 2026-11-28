@@ -34,6 +34,6 @@ Also read `08_addendum_second_asset_batch.md`: all packs there are local-only an
 1. ~~Engine~~ Answered: Godot 4 approved. Title "Static Hours" approved.
 2. ~~Repo visibility~~ Answered: jam makes it private in GitHub settings; excluded packs stay out regardless.
 3. Title, protagonist and city names OK? (Static Hours, Dez Harlan, Port Varro: placeholders.)
-4. Audio: any source for music/SFX/voice, or should the plan assume placeholder sounds for now?
+4. ~~Audio~~ Music supplied (Piano Pack, CHAOS; see file 08). Still open: ambience, impacts, explosions, shotgun/revolver SFX, narration.
 5. Scope: six missions plus hub fine? Controller support important?
 6. Do you have licenses/store pages for packs 3, 4, 5, 8, 10 (PSX Brick, GGBot cars, UrbanMan, Detective Office, Industrial)?
