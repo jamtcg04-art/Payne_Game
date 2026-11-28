@@ -1,0 +1,20 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install "gdtoolkit==4.*"
+      - run: gdlint scripts
+      - run: gdformat --check scripts
+  smoke:
+    runs-on: ubuntu-latest
+    container: barichello/godot-ci:4.4
+    steps:
+      - uses: actions/checkout@v4
+      - run: godot --headless --import || true
+      - run: godot --headless --quit-after 300 res://scenes/levels/Boot.tscn 2>&1 | tee out.log
+      - run: "! grep -E 'ERROR|SCRIPT ERROR' out.log"
