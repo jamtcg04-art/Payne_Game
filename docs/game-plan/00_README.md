@@ -13,6 +13,7 @@ This folder is the plan a coding thread (Opus) executes step by step. Read in or
 | `05_systems_architecture.md` | Godot project layout, autoloads, scenes, scripts, data resources |
 | `06_milestones.md` | Phased milestones M0–M8 with concrete tasks and "done when" checks |
 | `07_opus_handoff.md` | Rules and first-session checklist for the executing thread |
+| `08_addendum_second_asset_batch.md` | 24 more uploads: guns, sound, urban/subway/interior packs, licenses, level mapping |
 
 ## Marked guesses (jam can change any of these)
 Every guess is tagged **[GUESS]**. The big ones: engine = Godot 4; title; protagonist/city/story; PSX-retro-modern look; singleplayer, PC, ~6 missions plus a small open hub. Open questions are collected at the end of `07_opus_handoff.md`.

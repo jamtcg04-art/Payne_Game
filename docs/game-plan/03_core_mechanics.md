@@ -11,6 +11,7 @@ All tunables live in `data/*.tres` resources (see file 05) so balancing needs no
 ## 3.2 Gunplay
 - Hitscan from camera ray to world, then bullet visual tracer from muzzle. Spread grows while moving/firing, shrinks while still/crouched.
 - Weapons as `WeaponData` resources: damage, rpm, mag size, reserve, reload time, recoil pattern (curve), spread, range, ammo type, headshot multiplier, hit-stop ms, sound/muzzle ids.
+- **Update (file 08):** the second asset batch adds pistol, revolver and shotgun models; roster is now pistol, revolver, machine pistol, pump shotgun, sawed-off, grenades, bat. Use original in-game names.
 - Starter loadout: **pistol** (placeholder = ZC57 mesh), **machine pistol** (MGP7), **sawn shotgun** (primitive mesh placeholder, M5), **frag grenade** (M67), **flash grenade** (M84), **bat** melee (primitive).
 - Feedback: camera kick, muzzle flash light (1 frame), brass ejection (RigidBody shells from `Bullet_*_Shell`), decals on impact (bullet holes by material), screen-space hit marker, 40 ms hit-stop on kill.
 - Surface table: `SurfaceType` on collision layer metadata → impact VFX/sound (concrete, metal, wood, flesh, glass, water).

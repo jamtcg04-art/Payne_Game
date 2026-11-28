@@ -9,3 +9,9 @@ assets/third_party/psx_cars/
 assets/third_party/urbanman/
 assets/third_party/detective_office/
 assets/third_party/industrial_exterior/
+# Second batch (see docs/game-plan/08_addendum_second_asset_batch.md): everything non-CC0 is local-only
+assets/third_party/*
+!assets/third_party/modular_kit/
+!assets/third_party/classic64/
+!assets/third_party/revline_props/
+!assets/third_party/ual/

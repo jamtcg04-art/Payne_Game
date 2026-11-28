@@ -18,6 +18,8 @@
 - [ ] Create project, autoloads, input map, CI.
 - [ ] Build `Test_Arena` and get a capsule moving with camera.
 
+Also read `08_addendum_second_asset_batch.md`: all packs there are local-only and gun names must be original.
+
 ## Risks to watch
 | Risk | Mitigation |
 |---|---|

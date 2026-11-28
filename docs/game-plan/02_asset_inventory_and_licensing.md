@@ -50,6 +50,8 @@ Keep these **out of the repo** (gitignored under `assets/third_party/`, kept loc
 
 Safe to commit (CC0): Modular Prototyping Kit, Classic 64, Revline Street Props, Universal Animation Library. Repo should still be made private by jam in GitHub settings; the plan is built so work can start with the CC0 packs only (grey-box levels, UAL animations, Revline props, Classic 64 materials) and the excluded packs slot in locally.
 
+> **Second batch of uploads is in `08_addendum_second_asset_batch.md`; all of it is local-only.**
+
 ## Licensing actions
 - [ ] **Keep the excluded packs above out of git.** Shooter Essentials explicitly forbids repositories. Use a *private* repo, or add `assets/third_party/` to `.gitignore` and share a zip separately. **Ask jam which** (repo visibility is unknown).
 - [ ] Add `CREDITS.md` crediting Rgsdev, Quaternius, GamePip, Craig Snedeker (CC0 credit not required but kind), and Alstra Infinite (required by their license).
